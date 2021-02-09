@@ -45,11 +45,11 @@ class ProportionBakings(models.Model):
                                               name='650 type wheat flour to whole flour ratio cannot be negative'),
                        models.CheckConstraint(check=models.Q(wheat2000_to_whole__gte=0),
                                               name='2000 type wheat flour to whole flour ratio cannot be negative'),
-                       models.CheckConstraint(check=models.Q(rye720_to_whole_to_whole__gte=0),
+                       models.CheckConstraint(check=models.Q(rye720_to_whole__gte=0),
                                               name='720 type rye flour to whole flour ratio cannot be negative'),
-                       models.CheckConstraint(check=models.Q(rye2000_to_whole_to_whole__gte=0),
+                       models.CheckConstraint(check=models.Q(rye2000_to_whole__gte=0),
                                               name='2000 type rye flour to whole flour ratio cannot be negative'),
-                       models.CheckConstraint(check=models.Q(spelt650_to_whole_to_whole_to_whole__gte=0),
+                       models.CheckConstraint(check=models.Q(spelt650_to_whole__gte=0),
                                               name='650 type spelt flour to whole flour ratio cannot be negative')]
 
 

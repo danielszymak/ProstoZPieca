@@ -102,15 +102,15 @@ class Migration(migrations.Migration):
         ),
         migrations.AddConstraint(
             model_name='proportionbakings',
-            constraint=models.CheckConstraint(check=models.Q(rye720_to_whole_to_whole__gte=0), name='720 type rye flour to whole flour ratio cannot be negative'),
+            constraint=models.CheckConstraint(check=models.Q(rye720_to_whole__gte=0), name='720 type rye flour to whole flour ratio cannot be negative'),
         ),
         migrations.AddConstraint(
             model_name='proportionbakings',
-            constraint=models.CheckConstraint(check=models.Q(rye2000_to_whole_to_whole__gte=0), name='2000 type rye flour to whole flour ratio cannot be negative'),
+            constraint=models.CheckConstraint(check=models.Q(rye2000_to_whole__gte=0), name='2000 type rye flour to whole flour ratio cannot be negative'),
         ),
         migrations.AddConstraint(
             model_name='proportionbakings',
-            constraint=models.CheckConstraint(check=models.Q(spelt650_to_whole_to_whole_to_whole__gte=0), name='650 type spelt flour to whole flour ratio cannot be negative'),
+            constraint=models.CheckConstraint(check=models.Q(spelt650_to_whole__gte=0), name='650 type spelt flour to whole flour ratio cannot be negative'),
         ),
         migrations.AddField(
             model_name='processbakings',

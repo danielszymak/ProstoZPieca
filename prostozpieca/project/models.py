@@ -31,7 +31,7 @@ class ProportionBaking(models.Model):
     spelt650_to_whole = models.DecimalField("650 type rye flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
 
     def __str__(self):
-        return self.baking
+        return self.baking.name
 
     class Meta:
 
@@ -76,7 +76,7 @@ class ProcessBaking(models.Model):
     temperature_of_baking = models.PositiveIntegerField("Temperature of baking in degrees of Celsius", default=200)
 
     def __str__(self):
-        return self.baking
+        return self.baking.name
 
 
 class EquipmentBaking(models.Model):
@@ -89,4 +89,4 @@ class EquipmentBaking(models.Model):
     scale = models.BooleanField(default=True)
 
     def __str__(self):
-        return self.baking
+        return self.baking.name

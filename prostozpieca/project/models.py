@@ -28,7 +28,7 @@ class ProportionBaking(models.Model):
     wheat2000_to_whole = models.DecimalField("2000 type wheat flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
     rye720_to_whole = models.DecimalField("720 type rye flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
     rye2000_to_whole = models.DecimalField("2000 type rye flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
-    spelt650_to_whole = models.DecimalField("650 type rye flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
+    spelt650_to_whole = models.DecimalField("650 type spelt flour to whole flour ratio in recipe", decimal_places=3, max_digits=10, default=0.00)
 
     def __str__(self):
         return self.baking.name

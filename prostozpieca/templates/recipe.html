@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe for {{ baking.name }}</title>
+</head>
+<body>
+    <h2>{{ baking.name.title }}</h2>
+    Składniki:
+    <ul>
+        {% for item, value in proportions.items %}
+        {% if value %}
+        <li>{{ item }} - {{ value }} g</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    Sprzęt:
+    <ul>
+        {% for item, value in equipment.items %}
+        {% if value %}
+        <li>{{ item }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    Proces:
+    <ul>
+        {% for item, value in process.items %}
+        {% if value %}
+        <li>{{ item }} - {{ value }}</li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+    <a href="">Do roboty!</a>
+</body>
+</html>

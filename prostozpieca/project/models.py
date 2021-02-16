@@ -1,4 +1,5 @@
 from django.db import models
+from django.auth.models import User
 
 
 # Create your models here.
@@ -90,3 +91,16 @@ class EquipmentBaking(models.Model):
 
     def __str__(self):
         return self.baking.name
+
+
+class UserBakingAttempt(models.Model):
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    baking = models.ForeignKey(Bakings, on_delete=models.CASCADE, verbose_name="Name of baking")
+    mass_of_dough = models.DecimalField("Total mass of dough", decimal_places=2, max_digits=10, default=0.00)
+    sourdough_ready = models.BooleanField(default=False)
+    poolish_ready = models.BooleanField(default=False)
+    ingredients_mixed = models.BooleanField(default=False)
+    stretch_fold_done = models.BooleanField(default=False)
+    growing_finished = models.BooleanField(default=False)
+    baking_finished = models.BooleanField(default=False)
